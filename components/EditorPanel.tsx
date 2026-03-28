@@ -249,12 +249,64 @@ const EditorPanel: React.FC<EditorPanelProps> = ({
             </div>
 
             <div className="form-group">
-              <label className="form-label">الرقم الخلفي</label>
+              <label className="form-label">الرقم الخلفي (03)</label>
               <input 
                 type="text"
                 value={slide.numberText}
                 onChange={(e) => onUpdate({ numberText: e.target.value })}
                 className="form-input"
+              />
+            </div>
+
+            <div className="form-group">
+              <div className="flex justify-between items-center mb-1">
+                <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', fontWeight: 'bold' }}>{slide.numberFontSize || 380}px</span>
+                <label className="form-label">حجم الرقم الخلفي</label>
+              </div>
+              <input 
+                type="range"
+                min="100"
+                max="800"
+                step="5"
+                value={slide.numberFontSize || 380}
+                onChange={(e) => onUpdate({ numberFontSize: parseInt(e.target.value) })}
+                style={{ 
+                  width: '100%', 
+                  accentColor: 'var(--neon-cyan)',
+                  cursor: 'pointer'
+                }}
+              />
+            </div>
+
+            <div className="form-group" style={{ marginTop: '-0.5rem' }}>
+              <div className="flex justify-between items-center mb-1">
+                <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', fontWeight: 'bold' }}>{Math.round((slide.numberOpacity ?? 0.35) * 100)}%</span>
+                <label className="form-label">شفافية الرقم</label>
+              </div>
+              <input 
+                type="range"
+                min="0"
+                max="1"
+                step="0.05"
+                value={slide.numberOpacity ?? 0.35}
+                onChange={(e) => onUpdate({ numberOpacity: parseFloat(e.target.value) })}
+                style={{ width: '100%', accentColor: 'var(--neon-cyan)', cursor: 'pointer' }}
+              />
+            </div>
+
+            <div className="form-group" style={{ marginTop: '-0.5rem' }}>
+              <div className="flex justify-between items-center mb-1">
+                <span style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', fontWeight: 'bold' }}>{(slide.numberRotation ?? 0)}°</span>
+                <label className="form-label">ميلان الرقم</label>
+              </div>
+              <input 
+                type="range"
+                min="-45"
+                max="45"
+                step="1"
+                value={slide.numberRotation ?? 0}
+                onChange={(e) => onUpdate({ numberRotation: parseInt(e.target.value) })}
+                style={{ width: '100%', accentColor: 'var(--neon-cyan)', cursor: 'pointer' }}
               />
             </div>
           </div>

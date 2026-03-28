@@ -67,6 +67,9 @@ const App: React.FC = () => {
         showGrid: currentSlide.showGrid,
         customCss: currentSlide.customCss,
         logoUrl: currentSlide.logoUrl,
+        numberFontSize: currentSlide.numberFontSize,
+        numberOpacity: currentSlide.numberOpacity,
+        numberRotation: currentSlide.numberRotation,
       }));
       setSlides(newSlides);
       setCurrentIndex(0);

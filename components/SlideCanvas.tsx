@@ -76,7 +76,13 @@ const SlideCanvas = forwardRef<HTMLDivElement, SlideCanvasProps>(({ slide, scale
           className="poster-number"
           style={{ 
               color: slide.accentColor,
-              transition: 'all 0.7s',
+              fontSize: slide.numberFontSize ? `${slide.numberFontSize}px` : undefined,
+              opacity: slide.numberOpacity ?? 0.35,
+              transform: `translateY(110px) rotate(${slide.numberRotation ?? 0}deg)`,
+              transition: 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
+              display: 'flex',
+              justifyContent: 'center',
+              width: '100%',
           }}
         >
           {slide.numberText}

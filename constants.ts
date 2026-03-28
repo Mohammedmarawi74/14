@@ -41,6 +41,9 @@ export const INITIAL_SLIDES: Slide[] = [
     secondaryColor: DEFAULT_SECONDARY_COLOR,
     showGrid: true,
     customCss: '',
+    numberFontSize: 380,
+    numberOpacity: 0.35,
+    numberRotation: 0,
     logoUrl: undefined,
   },
 ];

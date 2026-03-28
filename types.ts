@@ -10,6 +10,9 @@ export interface Slide {
   showGrid: boolean;
   customCss?: string;
   logoUrl?: string; // New field for user-uploaded logo
+  numberFontSize?: number;
+  numberOpacity?: number;
+  numberRotation?: number;
 }
 
 export interface CarouselState {
