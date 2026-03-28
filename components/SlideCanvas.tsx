@@ -115,6 +115,12 @@ const SlideCanvas = forwardRef<HTMLDivElement, SlideCanvasProps>(({ slide, scale
           {slide.description}
         </p>
       </div>
+
+      {/* Footer Branding */}
+      <div className="poster-footer">
+        <div className="footer-platform">منصة المستثمر الاقتصادية</div>
+        <div className="footer-domain">al_inverstor.com</div>
+      </div>
     </div>
   );
 });

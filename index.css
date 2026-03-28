@@ -899,7 +899,7 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 40px;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 5.5;
   display: flex;
   flex-direction: column;
   padding: 3rem;
@@ -934,7 +934,7 @@ body {
   font-weight: 900;
   line-height: 1;
   letter-spacing: -20px;
-  transform: rotate(-2deg) translateY(140px);
+  transform: rotate(-2deg) translateY(120px);
   opacity: 0.55;
   user-select: none;
   white-space: nowrap;
@@ -977,8 +977,9 @@ body {
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 4rem;
+  margin-bottom: 6rem;
   text-align: right;
   direction: rtl;
 }
@@ -999,6 +1000,37 @@ body {
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
   max-width: 90%;
+}
+
+.poster-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-platform {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: white;
+  letter-spacing: -0.01em;
+  opacity: 0.8;
+}
+
+.footer-domain {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.05em;
+  font-family: system-ui, -apple-system, sans-serif;
 }
 
 .loading-spinner {
